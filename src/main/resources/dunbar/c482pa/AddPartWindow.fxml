@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="381.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dunbar.c482pa.Controllers.AddPartWindowController">
+   <children>
+      <RadioButton fx:id="inHouseRadio" layoutX="171.0" layoutY="59.0" mnemonicParsing="false" onAction="#onActionInHouse" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="manufactureLocation" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="outsourcedRadio" layoutX="283.0" layoutY="59.0" mnemonicParsing="false" onAction="#onActionOutsourced" text="Outsourced" toggleGroup="$manufactureLocation" />
+      <Label layoutX="51.0" layoutY="57.0" text="Add Part">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="84.0" layoutY="124.0" text="ID" />
+      <Label layoutX="84.0" layoutY="159.0" text="Name" />
+      <Label layoutX="84.0" layoutY="194.0" text="Inv" />
+      <Label layoutX="84.0" layoutY="229.0" text="Price/Cost" />
+      <Label layoutX="84.0" layoutY="264.0" text="Max" />
+      <Label fx:id="locationLabel" layoutX="84.0" layoutY="299.0" text="Machine ID" />
+      <TextField fx:id="idText" editable="false" layoutX="171.0" layoutY="120.0" />
+      <TextField fx:id="nameText" layoutX="171.0" layoutY="155.0" />
+      <TextField fx:id="invText" layoutX="171.0" layoutY="190.0" />
+      <TextField fx:id="priceText" layoutX="171.0" layoutY="225.0" />
+      <TextField fx:id="maxText" layoutX="171.0" layoutY="260.0" />
+      <TextField fx:id="locationText" layoutX="171.0" layoutY="295.0" />
+      <Label layoutX="355.0" layoutY="264.0" text="Min" />
+      <TextField fx:id="minText" layoutX="403.0" layoutY="260.0" />
+      <Button layoutX="553.0" layoutY="342.0" mnemonicParsing="false" onAction="#onActionSaveAndReturn" text="Save" />
+      <Button layoutX="634.0" layoutY="342.0" mnemonicParsing="false" onAction="#onActionReturnToMain" text="Cancel" />
+   </children>
+</AnchorPane>
